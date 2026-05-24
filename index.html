@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Personal portfolio of Chinyere Chinekezi, Cybersecurity, GRC and AI Governance professional." />
   <title>Chinyere Chinekezi | Cybersecurity, GRC & AI Governance</title>
 
   <style>
@@ -28,7 +29,7 @@
     }
 
     .container {
-      width: min(1140px, 90%);
+      width: min(1160px, 90%);
       margin: 0 auto;
     }
 
@@ -37,7 +38,7 @@
       color: white;
       position: sticky;
       top: 0;
-      z-index: 30;
+      z-index: 50;
       border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     }
 
@@ -54,6 +55,7 @@
       align-items: center;
       gap: 12px;
       text-decoration: none;
+      min-width: 245px;
     }
 
     .brand-mark {
@@ -67,6 +69,7 @@
       justify-content: center;
       font-weight: 800;
       letter-spacing: 0.5px;
+      flex: 0 0 auto;
     }
 
     .brand-text strong {
@@ -85,15 +88,16 @@
       display: flex;
       align-items: center;
       justify-content: flex-end;
-      gap: 18px;
+      gap: 15px;
       flex-wrap: wrap;
     }
 
     nav a {
       color: #e5e7eb;
       text-decoration: none;
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 700;
+      white-space: nowrap;
     }
 
     nav a:hover {
@@ -103,16 +107,16 @@
     .nav-button {
       background: white;
       color: #0f172a;
-      padding: 9px 15px;
+      padding: 9px 14px;
       border-radius: 999px;
       font-weight: 800;
     }
 
     .hero {
       background:
-        radial-gradient(circle at top right, rgba(123, 2, 17, 0.10), transparent 32%),
+        radial-gradient(circle at top right, rgba(123, 2, 17, 0.12), transparent 34%),
         linear-gradient(135deg, #ffffff 0%, #f8fafc 48%, #e2e8f0 100%);
-      padding: 90px 0 76px;
+      padding: 92px 0 78px;
     }
 
     .hero-grid {
@@ -138,10 +142,10 @@
     }
 
     .hero h1 {
-      font-size: clamp(38px, 5vw, 64px);
-      line-height: 1.08;
+      font-size: clamp(39px, 5vw, 66px);
+      line-height: 1.07;
       color: #0f172a;
-      letter-spacing: -1.5px;
+      letter-spacing: -1.6px;
       margin-bottom: 24px;
     }
 
@@ -149,11 +153,34 @@
       color: #7b0211;
     }
 
-    .hero p {
-      font-size: 19px;
+    .hero-intro {
+      font-size: 20px;
       color: #475569;
-      max-width: 720px;
+      max-width: 760px;
+      margin-bottom: 24px;
+    }
+
+    .availability {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      background: white;
+      border: 1px solid #e2e8f0;
+      color: #334155;
+      padding: 10px 14px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 14px;
       margin-bottom: 30px;
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+    }
+
+    .availability-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #16a34a;
+      display: inline-block;
     }
 
     .hero-actions {
@@ -201,40 +228,40 @@
       transform: translateY(-2px);
     }
 
-    .highlights {
+    .metrics-strip {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 14px;
-      max-width: 760px;
+      max-width: 850px;
     }
 
-    .highlight {
-      background: rgba(255, 255, 255, 0.82);
+    .metric-card {
+      background: rgba(255, 255, 255, 0.86);
       border: 1px solid #e2e8f0;
       border-radius: 16px;
       padding: 18px;
       box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
     }
 
-    .highlight strong {
+    .metric-card strong {
       display: block;
       color: #0f172a;
-      font-size: 21px;
+      font-size: 20px;
       margin-bottom: 4px;
     }
 
-    .highlight span {
+    .metric-card span {
       color: #64748b;
-      font-size: 14px;
+      font-size: 13px;
     }
 
     .profile-card {
       position: relative;
       background: #0f172a;
       color: white;
-      border-radius: 28px;
-      padding: 30px;
-      box-shadow: 0 30px 70px rgba(15, 23, 42, 0.22);
+      border-radius: 30px;
+      padding: 32px;
+      box-shadow: 0 30px 70px rgba(15, 23, 42, 0.24);
       overflow: hidden;
     }
 
@@ -242,7 +269,7 @@
       content: "";
       position: absolute;
       inset: 0;
-      background: radial-gradient(circle at top right, rgba(123, 2, 17, 0.65), transparent 36%);
+      background: radial-gradient(circle at top right, rgba(123, 2, 17, 0.68), transparent 38%);
       pointer-events: none;
     }
 
@@ -253,33 +280,33 @@
     }
 
     .profile-photo {
-      width: 235px;
-      height: 235px;
-      border-radius: 26px;
+      width: 240px;
+      height: 240px;
+      border-radius: 28px;
       object-fit: cover;
       border: 5px solid rgba(255, 255, 255, 0.92);
-      box-shadow: 0 18px 35px rgba(0, 0, 0, 0.32);
+      box-shadow: 0 18px 35px rgba(0, 0, 0, 0.34);
       margin-bottom: 22px;
       background: #e2e8f0;
     }
 
     .profile-fallback {
       display: none;
-      width: 235px;
-      height: 235px;
-      border-radius: 26px;
+      width: 240px;
+      height: 240px;
+      border-radius: 28px;
       margin: 0 auto 22px;
       background: #7b0211;
       color: white;
       align-items: center;
       justify-content: center;
-      font-size: 68px;
+      font-size: 70px;
       font-weight: 800;
       border: 5px solid rgba(255, 255, 255, 0.92);
     }
 
     .profile-card h2 {
-      font-size: 26px;
+      font-size: 27px;
       margin-bottom: 8px;
     }
 
@@ -306,7 +333,7 @@
     }
 
     section {
-      padding: 78px 0;
+      padding: 82px 0;
     }
 
     .section-white {
@@ -314,13 +341,13 @@
     }
 
     .section-heading {
-      max-width: 780px;
-      margin: 0 auto 40px;
+      max-width: 800px;
+      margin: 0 auto 42px;
       text-align: center;
     }
 
     .section-heading h2 {
-      font-size: clamp(30px, 4vw, 42px);
+      font-size: clamp(31px, 4vw, 43px);
       color: #0f172a;
       margin-bottom: 12px;
       letter-spacing: -0.8px;
@@ -341,7 +368,10 @@
     .about-box,
     .card,
     .blog-card,
-    .research-card {
+    .research-card,
+    .experience-card,
+    .proficiency-card,
+    .contribution-card {
       background: white;
       border: 1px solid #e2e8f0;
       border-radius: 22px;
@@ -352,40 +382,69 @@
     .section-white .about-box,
     .section-white .card,
     .section-white .blog-card,
-    .section-white .research-card {
+    .section-white .research-card,
+    .section-white .experience-card,
+    .section-white .proficiency-card,
+    .section-white .contribution-card {
       background: #f8fafc;
     }
 
-    .about-box h3 {
-      color: #7b0211;
+    .about-box h3,
+    .experience-card h3,
+    .proficiency-card h3,
+    .contribution-card h3 {
+      color: #0f172a;
       margin-bottom: 12px;
       font-size: 22px;
     }
 
     .about-box p,
-    .about-box li {
+    .about-box li,
+    .experience-card p,
+    .proficiency-card li,
+    .contribution-card p,
+    .contribution-card li {
       color: #475569;
       font-size: 16px;
     }
 
-    .about-box ul {
+    .about-box p + p,
+    .experience-card p + p,
+    .contribution-card p + p {
+      margin-top: 14px;
+    }
+
+    .about-box ul,
+    .proficiency-card ul,
+    .contribution-card ul {
       padding-left: 20px;
       margin-top: 10px;
     }
 
-    .cards {
+    .cards,
+    .experience-grid,
+    .proficiency-grid,
+    .contribution-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 22px;
     }
 
-    .card {
+    .card,
+    .blog-card,
+    .research-card,
+    .experience-card,
+    .proficiency-card,
+    .contribution-card {
       transition: 0.2s ease;
     }
 
     .card:hover,
     .blog-card:hover,
-    .research-card:hover {
+    .research-card:hover,
+    .experience-card:hover,
+    .proficiency-card:hover,
+    .contribution-card:hover {
       transform: translateY(-4px);
       box-shadow: 0 18px 40px rgba(15, 23, 42, 0.10);
     }
@@ -413,6 +472,14 @@
     .research-card p {
       color: #475569;
       margin-bottom: 16px;
+    }
+
+    .timeline-note {
+      display: inline-block;
+      color: #64748b;
+      font-size: 14px;
+      margin-bottom: 10px;
+      font-weight: 700;
     }
 
     .cert-grid {
@@ -476,7 +543,7 @@
 
     .project-feature p {
       color: #cbd5e1;
-      max-width: 760px;
+      max-width: 780px;
     }
 
     .project-links,
@@ -519,6 +586,7 @@
       color: #64748b;
       font-size: 14px;
       margin-bottom: 10px;
+      font-weight: 700;
     }
 
     .read-link {
@@ -709,6 +777,18 @@
       font-weight: 700;
     }
 
+    @media (max-width: 1080px) {
+      .navbar {
+        align-items: flex-start;
+        padding: 14px 0;
+        flex-direction: column;
+      }
+
+      nav {
+        justify-content: flex-start;
+      }
+    }
+
     @media (max-width: 980px) {
       .hero-grid,
       .about-grid,
@@ -725,8 +805,8 @@
         margin: 0 auto;
       }
 
-      .highlights {
-        grid-template-columns: 1fr;
+      .metrics-strip {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
       }
     }
 
@@ -734,7 +814,7 @@
       .navbar {
         justify-content: center;
         text-align: center;
-        padding: 14px 0;
+        align-items: center;
       }
 
       nav {
@@ -752,6 +832,10 @@
 
       .button {
         width: 100%;
+      }
+
+      .metrics-strip {
+        grid-template-columns: 1fr;
       }
 
       .profile-photo,
@@ -780,12 +864,15 @@
 
       <nav>
         <a href="#home">Home</a>
-        <a href="#about">About Me</a>
-        <a href="#skills">Core Skills</a>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#technical">Tools</a>
         <a href="#certifications">Certifications</a>
         <a href="#projects">Projects</a>
         <a href="#research">Research</a>
-        <a href="#insights">Blog</a>
+        <a href="#insights">Insights</a>
+        <a href="#community">Community</a>
         <a href="#contact" class="nav-button">Contact</a>
       </nav>
     </div>
@@ -797,9 +884,14 @@
         <div>
           <div class="eyebrow">Personal Portfolio</div>
           <h1>Cybersecurity, GRC and <span>AI Governance</span> professional.</h1>
-          <p>
-            I help organisations investigate security events, manage cyber risk, improve governance, and translate complex security issues into clear, practical decisions.
+          <p class="hero-intro">
+            Helping organisations turn security alerts, cyber risk and AI governance requirements into clear decisions, practical controls and measurable improvement.
           </p>
+
+          <div class="availability">
+            <span class="availability-dot"></span>
+            Open to cybersecurity, GRC, AI governance, security awareness and research opportunities.
+          </div>
 
           <div class="hero-actions">
             <button class="button primary" type="button" onclick="openContactForm()">Contact Me</button>
@@ -807,18 +899,22 @@
             <a href="cv.pdf" target="_blank" class="button secondary">Download CV</a>
           </div>
 
-          <div class="highlights">
-            <div class="highlight">
-              <strong>Security Operations</strong>
-              <span>Detection, triage, investigation and incident response</span>
+          <div class="metrics-strip">
+            <div class="metric-card">
+              <strong>8+ Years</strong>
+              <span>Security, ITSM, governance and risk-aligned work</span>
             </div>
-            <div class="highlight">
-              <strong>Cyber GRC</strong>
-              <span>Risk assessment, controls, assurance and documentation</span>
+            <div class="metric-card">
+              <strong>40%</strong>
+              <span>Reduction in potential customer data breach risk contribution</span>
             </div>
-            <div class="highlight">
+            <div class="metric-card">
+              <strong>XDR + GRC</strong>
+              <span>Microsoft Defender XDR, Sentinel, KQL and control assurance</span>
+            </div>
+            <div class="metric-card">
               <strong>AI Governance</strong>
-              <span>Responsible AI adoption, risk and control alignment</span>
+              <span>ISO/IEC 42001, responsible AI and secure AI adoption</span>
             </div>
           </div>
         </div>
@@ -834,7 +930,7 @@
               <span class="tag">Defender XDR</span>
               <span class="tag">KQL</span>
               <span class="tag">ISO 27001</span>
-              <span class="tag">ISO 42001</span>
+              <span class="tag">ISO/IEC 42001</span>
               <span class="tag">NIST CSF</span>
             </div>
           </div>
@@ -842,51 +938,100 @@
       </div>
     </section>
 
-   <section id="about" class="section-white">
-  <div class="container">
-    <div class="section-heading">
-      <h2>About Me</h2>
-      <p>
-        Cybersecurity, GRC and AI governance professional with a strong blend of security operations, risk management, assurance, research and practical security education.
-      </p>
-    </div>
+    <section id="about" class="section-white">
+      <div class="container">
+        <div class="section-heading">
+          <h2>About Me</h2>
+          <p>
+            I work at the intersection of cybersecurity operations, governance, risk management and responsible AI.
+          </p>
+        </div>
 
-    <div class="about-grid">
-      <div class="about-box">
-        <h3>Professional Profile</h3>
-        <p>
-          I am a cybersecurity professional with experience across security operations, governance, risk and compliance, service management, business process improvement and responsible AI governance. My work focuses on helping organisations understand security risk, respond to threats, strengthen controls and make informed decisions that support resilience and trust.
-        </p>
-        <p>
-          In my current security operations work, I support alert triage, investigation and incident response using Microsoft Defender XDR, Microsoft Sentinel and KQL. I have also contributed to data loss prevention and awareness initiatives that helped reduce potential customer data breach risk, while producing clear investigation narratives and practical recommendations for stakeholders.
-        </p>
+        <div class="about-grid">
+          <div class="about-box">
+            <h3>Professional Profile</h3>
+            <p>
+              I am a cybersecurity professional with experience across security operations, governance, risk and compliance, IT service management, business process improvement, security awareness and AI governance. My work focuses on helping organisations investigate threats, understand risk, strengthen controls and make clear, evidence-based security decisions.
+            </p>
+            <p>
+              In security operations, I support alert triage, investigation and incident response using Microsoft Defender XDR, Microsoft Sentinel and KQL. I have also contributed to data loss prevention and security awareness initiatives, including work that helped reduce potential customer data breach risk.
+            </p>
+          </div>
+
+          <div class="about-box">
+            <h3>Professional Strengths</h3>
+            <ul>
+              <li>Security operations experience across alert triage, investigation, escalation and incident response.</li>
+              <li>GRC capability across cyber risk assessment, ISO 27001, control review, policy documentation and assurance reporting.</li>
+              <li>AI governance focus covering responsible AI, ISO/IEC 42001, AI risk assessment and secure AI adoption.</li>
+              <li>Ability to translate technical findings into clear business language for stakeholders and decision-makers.</li>
+              <li>Research background in web application security, penetration testing and OWASP methodology, with work presented at ACROSET 2024 and accepted for IEEE Xplore publication.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="about-box" style="margin-top: 28px;">
+          <h3>Professional Direction</h3>
+          <p>
+            My current focus is on practical, measurable security improvement. I am particularly interested in how organisations can move beyond tick-box compliance by using better risk visibility, stronger awareness, clearer control ownership and governance practices that support secure adoption of emerging technologies.
+          </p>
+          <p>
+            I bring a multidisciplinary perspective shaped by cybersecurity operations, AI governance, cybersecurity advisory, financial services technology, IT service management, process improvement, academic research and community contribution. This allows me to approach cybersecurity as both a technical discipline and a business resilience priority.
+          </p>
+        </div>
       </div>
+    </section>
 
-      <div class="about-box">
-        <h3>What I Bring</h3>
-        <ul>
-          <li>Hands-on security operations experience across alert investigation, triage, escalation and incident response.</li>
-          <li>Strong GRC capability, including cyber risk assessment, ISO 27001 alignment, control review, governance documentation and assurance reporting.</li>
-          <li>Practical AI governance knowledge, including responsible AI, AI risk assessment, ISO/IEC 42001 and secure AI adoption considerations.</li>
-          <li>Experience translating technical security findings into clear business language for decision-makers and operational teams.</li>
-          <li>Academic and research background in web application security, penetration testing and OWASP methodology, with research presented at ACROSET 2024 and accepted for IEEE Xplore publication.</li>
-        </ul>
+    <section id="experience">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Selected Experience</h2>
+          <p>
+            A focused snapshot of my work across security operations, AI governance, training, advisory and risk-led cybersecurity practice.
+          </p>
+        </div>
+
+        <div class="experience-grid">
+          <div class="experience-card">
+            <span class="accent">Full-Time</span>
+            <h3>Head, AI & Cybersecurity Programme</h3>
+            <span class="timeline-note">Seidea CIC</span>
+            <p>
+              Leading and supporting AI and cybersecurity programme activity with a focus on inclusive cyber talent development, responsible technology awareness, practical training, programme delivery and learner-centred cyber capability building.
+            </p>
+          </div>
+
+          <div class="experience-card">
+            <span class="accent">Security Operations</span>
+            <h3>XDR Security Analyst</h3>
+            <span class="timeline-note">Current security operations role</span>
+            <p>
+              Supporting alert triage, investigation, incident response and monitoring using Microsoft Defender XDR, Microsoft Sentinel and KQL. Contributing to investigation narratives, escalation quality, DLP awareness and security improvement activities.
+            </p>
+          </div>
+
+          <div class="experience-card">
+            <span class="accent">Freelance</span>
+            <h3>Cybersecurity Training & Advisory Consultant</h3>
+            <span class="timeline-note">Cyberguard Lounge</span>
+            <p>
+              Providing cybersecurity training and advisory support across security awareness, cyber risk, GRC, AI governance, practical learning design and organisational security maturity improvement.
+            </p>
+          </div>
+
+          <div class="experience-card">
+            <span class="accent">Earlier Experience</span>
+            <h3>IT Service Management & Business Process Analysis</h3>
+            <span class="timeline-note">Financial services and technology operations</span>
+            <p>
+              Built a strong operational foundation through incident, problem and change management, root cause analysis, service improvement, process optimisation, business continuity support and stakeholder reporting.
+            </p>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <div class="about-box" style="margin-top: 28px;">
-      <h3>Professional Direction</h3>
-      <p>
-        My professional interest sits at the intersection of cybersecurity operations, governance, human behaviour and emerging technology risk. I am particularly focused on how organisations can move from tick-box compliance to measurable security improvement through better risk visibility, practical awareness, defensible controls and evidence-based decision-making.
-      </p>
-      <p>
-        I bring a multidisciplinary perspective shaped by security operations, financial services technology, IT service management, business process analysis, academic research and community contribution. This allows me to approach cybersecurity not only as a technical function, but as a governance, people and business resilience priority.
-      </p>
-    </div>
-  </div>
-</section>
-
-    <section id="skills">
+    <section id="skills" class="section-white">
       <div class="container">
         <div class="section-heading">
           <h2>Core Skills</h2>
@@ -903,19 +1048,78 @@
           <div class="card">
             <span class="accent">Cyber GRC</span>
             <h3>Risk & Control Assurance</h3>
-            <p>Risk assessment, control review, policy development, ISO 27001 alignment and governance reporting.</p>
+            <p>Risk assessment, control review, policy development, ISO 27001 alignment, assurance documentation and governance reporting.</p>
           </div>
 
           <div class="card">
             <span class="accent">AI Governance</span>
             <h3>Responsible AI Risk Management</h3>
-            <p>AI system registers, AI risk assessment, vendor due diligence, governance documentation and ISO/IEC 42001 awareness.</p>
+            <p>AI system registers, AI risk assessment, vendor due diligence, ISO/IEC 42001 awareness and secure AI adoption support.</p>
           </div>
 
           <div class="card">
-            <span class="accent">Communication</span>
-            <h3>Security Awareness & Reporting</h3>
-            <p>Clear investigation narratives, stakeholder updates, awareness content and practical security guidance.</p>
+            <span class="accent">Security Culture</span>
+            <h3>Awareness & Behaviour Change</h3>
+            <p>Practical awareness programmes, reporting culture, phishing resilience, role-based training and human-centric risk reduction.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="technical">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Technical Proficiencies</h2>
+          <p>A structured view of the tools, frameworks and practices that support my work.</p>
+        </div>
+
+        <div class="proficiency-grid">
+          <div class="proficiency-card">
+            <h3>Security Operations</h3>
+            <ul>
+              <li>Microsoft Defender XDR</li>
+              <li>Microsoft Sentinel</li>
+              <li>KQL</li>
+              <li>SIEM/XDR investigation</li>
+              <li>Alert triage and escalation</li>
+              <li>Incident response support</li>
+            </ul>
+          </div>
+
+          <div class="proficiency-card">
+            <h3>Governance & Risk</h3>
+            <ul>
+              <li>ISO 27001</li>
+              <li>ISO/IEC 42001</li>
+              <li>NIST Cybersecurity Framework</li>
+              <li>CIS Controls</li>
+              <li>Cyber risk assessment</li>
+              <li>Control documentation</li>
+            </ul>
+          </div>
+
+          <div class="proficiency-card">
+            <h3>Security Testing & Analysis</h3>
+            <ul>
+              <li>OWASP methodology</li>
+              <li>Nessus</li>
+              <li>Burp Suite</li>
+              <li>Wireshark</li>
+              <li>Vulnerability assessment</li>
+              <li>Penetration testing concepts</li>
+            </ul>
+          </div>
+
+          <div class="proficiency-card">
+            <h3>Cloud, Identity & Operations</h3>
+            <ul>
+              <li>Microsoft Entra ID</li>
+              <li>Azure and AWS awareness</li>
+              <li>MFA and access control</li>
+              <li>ITSM</li>
+              <li>Incident, problem and change management</li>
+              <li>Business continuity support</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -924,7 +1128,7 @@
     <section id="certifications" class="section-white">
       <div class="container">
         <div class="section-heading">
-          <h2>Certifications</h2>
+          <h2>Certifications & Education</h2>
           <p>Professional certifications and academic background supporting my cybersecurity, governance and AI risk focus.</p>
         </div>
 
@@ -1000,14 +1204,14 @@
       <div class="container">
         <div class="section-heading">
           <h2>Projects / Portfolio</h2>
-          <p>Selected work demonstrating practical security governance, AI risk management and professional documentation.</p>
+          <p>Selected work demonstrating practical security governance, AI risk management, awareness and professional documentation.</p>
         </div>
 
         <div class="project-feature">
           <div>
             <h3>Information Security & AI Governance Portfolio</h3>
             <p>
-              A practical GitHub portfolio containing templates and resources focused on information security governance, AI risk assessment, control mapping and responsible technology adoption.
+              A practical GitHub portfolio containing templates and resources focused on information security governance, AI risk assessment, control mapping, vendor due diligence and responsible technology adoption.
             </p>
             <div class="project-links">
               <a href="https://github.com/Cchinyere/information-security-ai-governance" target="_blank">Open GitHub Repository</a>
@@ -1019,19 +1223,26 @@
           <div class="card">
             <span class="accent">AI Governance</span>
             <h3>AI System Register Template</h3>
-            <p>A practical register structure for recording AI systems, ownership, purpose, risk level, data use and governance requirements.</p>
+            <p>A practical register structure for recording AI systems, ownership, purpose, data use, risk level, governance status and control requirements.</p>
           </div>
 
           <div class="card">
             <span class="accent">Security Controls</span>
             <h3>AI Security Control Map</h3>
-            <p>A control-focused approach for mapping AI-related security risks to practical governance and assurance activities.</p>
+            <p>A control-focused resource showing how AI systems introduce security risks beyond traditional cyber GRC controls.</p>
           </div>
 
           <div class="card">
-            <span class="accent">Third Party Risk</span>
-            <h3>AI Vendor Due Diligence</h3>
-            <p>A checklist approach for reviewing AI vendors against security, privacy, governance and accountability expectations.</p>
+            <span class="accent">Security Awareness</span>
+            <h3>AI-Era Security Awareness Program</h3>
+            <p>A structured awareness framework for phishing, social engineering, deepfakes, AI tool use, role-based training and measurable behaviour change.</p>
+            <a class="read-link" href="https://github.com/Cchinyere/security-awareness-program" target="_blank">View Repository</a>
+          </div>
+
+          <div class="card">
+            <span class="accent">Third-Party Risk</span>
+            <h3>AI Vendor Due Diligence Checklist</h3>
+            <p>A checklist approach for reviewing AI vendors against security, privacy, governance, accountability and operational risk expectations.</p>
           </div>
         </div>
       </div>
@@ -1049,27 +1260,24 @@
             <span class="accent">Cybersecurity Research</span>
             <h3>Web Application Security Evaluation</h3>
             <p>
-              MSc Cybersecurity dissertation on evaluating information security in web applications using penetration testing techniques and OWASP methodology.
+              MSc Cybersecurity dissertation focused on evaluating information security in web applications using penetration testing techniques and OWASP methodology.
             </p>
-            <a class="read-link" href="#contact">Request Details</a>
           </div>
 
           <div class="research-card">
             <span class="accent">Conference Output</span>
-            <h3>ACROSET 2024</h3>
+            <h3>ACROSET 2024 / IEEE Xplore</h3>
             <p>
-              Research presented at ACROSET 2024, with publication accepted for IEEE Xplore, focused on web application security evaluation.
+              Research presented at ACROSET 2024 and accepted for IEEE Xplore publication, focused on web application security evaluation.
             </p>
-            <a class="read-link" href="#contact">Discuss Research</a>
           </div>
 
           <div class="research-card">
             <span class="accent">Research Interest</span>
             <h3>Cyber Risk Perception and Behavioural Exposure</h3>
             <p>
-              Developing interest in behavioural cyber risk, security awareness effectiveness, objective security indicators and AI-enabled social engineering risks.
+              Exploring behavioural cyber risk, security awareness effectiveness, objective security indicators and the impact of AI-enabled social engineering.
             </p>
-            <a class="read-link" href="#insights">Read Insights</a>
           </div>
         </div>
       </div>
@@ -1079,36 +1287,71 @@
       <div class="container">
         <div class="section-heading">
           <h2>Insights / Blog</h2>
-          <p>Short professional articles on cybersecurity, GRC, security operations and AI governance.</p>
+          <p>Short professional insight briefs on cybersecurity, GRC, security operations and AI governance.</p>
         </div>
 
         <div class="blog-grid">
           <article class="blog-card">
-            <div class="blog-meta">AI Governance | Coming Soon</div>
+            <div class="blog-meta">Insight Brief | AI Governance</div>
             <h3>Why AI Governance Is Becoming a Cybersecurity Priority</h3>
             <p>
-              A practical look at why AI systems need clear ownership, risk assessment, data governance, vendor review and security controls.
+              A practical view on how AI introduces new risks around data, accountability, third-party tools, explainability, control ownership and secure adoption.
             </p>
             <a class="read-link" href="#contact">Request Article</a>
           </article>
 
           <article class="blog-card">
-            <div class="blog-meta">Cyber GRC | Coming Soon</div>
+            <div class="blog-meta">Insight Brief | Cyber GRC</div>
             <h3>What GRC Means in Practical Cybersecurity Work</h3>
             <p>
-              A plain-language explanation of governance, risk and compliance, and how it supports better security decisions.
+              A clear explanation of how governance, risk and compliance help organisations move from policy statements to better security decisions and control assurance.
             </p>
             <a class="read-link" href="#contact">Request Article</a>
           </article>
 
           <article class="blog-card">
-            <div class="blog-meta">Security Operations | Coming Soon</div>
-            <h3>Why Clear Investigation Notes Matter in Security Operations</h3>
+            <div class="blog-meta">Insight Brief | Security Awareness</div>
+            <h3>Why Security Awareness Must Evolve in the AI Era</h3>
             <p>
-              A short article on how strong investigation narratives improve escalation, decision-making and incident response quality.
+              A practical look at phishing, deepfakes, voice cloning, AI-generated fraud and the need for stronger verification behaviours.
             </p>
             <a class="read-link" href="#contact">Request Article</a>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="community" class="section-white">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Community & Professional Contribution</h2>
+          <p>Contributing to cybersecurity education, mentoring, inclusive talent development and practical knowledge sharing.</p>
+        </div>
+
+        <div class="contribution-grid">
+          <div class="contribution-card">
+            <h3>Cybersecurity Education & Mentoring</h3>
+            <p>
+              I contribute to practical cybersecurity education and mentoring by supporting learners, developing resources and helping people understand how cybersecurity, governance and responsible AI apply in real work environments.
+            </p>
+          </div>
+
+          <div class="contribution-card">
+            <h3>Inclusive Cyber Talent Development</h3>
+            <p>
+              Through professional and community initiatives, I support opportunities that broaden access to cybersecurity knowledge, career development and practical skills for underrepresented groups.
+            </p>
+          </div>
+
+          <div class="contribution-card">
+            <h3>Professional Engagement</h3>
+            <ul>
+              <li>Women in CyberSecurity UK & Ireland</li>
+              <li>Seidea CIC</li>
+              <li>IACAIP volunteer research contribution</li>
+              <li>Cybersecurity mentoring and advisory initiatives</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
@@ -1118,11 +1361,12 @@
         <div class="contact-box">
           <h2>Contact</h2>
           <p>
-            I am open to cybersecurity, GRC, AI governance, research, training and collaboration opportunities.
+            I am open to cybersecurity, GRC, AI governance, research, training, mentoring and collaboration opportunities.
           </p>
           <div class="contact-links">
             <button type="button" onclick="openContactForm()">Email</button>
             <a href="https://github.com/Cchinyere/information-security-ai-governance" target="_blank">GitHub Portfolio</a>
+            <a href="https://github.com/Cchinyere/security-awareness-program" target="_blank">Security Awareness Program</a>
             <a href="https://www.linkedin.com/in/chinyere-chinekezi-35043521/" target="_blank">https://www.linkedin.com/in/chinyere-chinekezi-35043521/</a>
           </div>
         </div>
